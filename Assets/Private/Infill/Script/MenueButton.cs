@@ -5,6 +5,9 @@ using UnityEngine;
 public class MenueButton : MonoBehaviour
 {
     [SerializeField] private GameObject menueObject;
+    private void Start() {
+        menueObject.SetActive(false);
+    }
     public void Activate()
     {
         menueObject.SetActive(true);
