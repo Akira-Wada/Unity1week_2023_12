@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 好感度をFavoriteSettingDataで設定した値に基づいて計算
+/// 好感度が0になるとOnFavoriteZero()が発火する
+/// 好感度の計測開始はOnLooking(GameObject)、終了はOnEndLooking() 
+/// </summary>
 public class FavoriteSystem : MonoBehaviour
 {
-    // private float _adjustTime; // 計測調整用 いらんかも
     private float _lookingTime = 0;
     private float _countDurationTime = 0;
     private bool _isLooking = false;
@@ -21,14 +25,12 @@ public class FavoriteSystem : MonoBehaviour
     private FavoriteParam _favoriteParamScript;
     private int _current_favorite;
 
+    private GameObject _hiroinObject;
 
-    // 必要な機能
-    // ヒロイン[N]の好感度を取ってくる
-    // 好感度のランクによって時間変数をセット
-    // 好感度を更新する処理
+
     void Start()
     {
-        LoadData();
+        LoadData();        
     }
 
     void Update()
@@ -46,30 +48,52 @@ public class FavoriteSystem : MonoBehaviour
             else
             {
                 _countDurationTime = 0;
+                _current_favorite = _favoriteParamScript.Get();
                 VaryFavorite();
+
+                Debug.Log(_hiroinObject.name + "の好感度：" + _favoriteParamScript.Get());
             }
-            Debug.Log(_current_favorite);
         }
         
     }
 
+    /// <summary>
+    /// 好感度の計測開始 
+    /// </summary>
+    /// <param name="hiroin">
+    /// 計測対象をGameObjectで取得
+    /// 取得するGameObjectにはFavoriteParamスクリプトがアタッチされている必要がある
+    /// </param>
     public void OnLooking(GameObject hiroin)
     {
+        _hiroinObject = hiroin;
         _favoriteParamScript = hiroin.GetComponent<FavoriteParam>();
         _current_favorite = _favoriteParamScript.Get();
+
+        // 好感度が０になると発火する関数を格納
+        _favoriteParamScript.OnFavoriteParamZero += OnFavoriteZero;
         
-        // _adjustTime = Time.time;
         _isLooking = true;
     }
 
+    /// <summary>
+    /// 好感度の計測終了
+    /// </summary>
     public void OnEndLooking()
     {
-        Debug.Log("ヒロインを見ていた時間： " + _lookingTime + " 秒");
+        Debug.Log(_hiroinObject.name + "を見ていた時間： " + _lookingTime + " 秒");
         _lookingTime = 0;
         _isLooking = false;
     }
 
 
+
+    // 好感度が０になると呼び出される
+    private void OnFavoriteZero()
+    {
+        Debug.Log(_hiroinObject.name + "<color=cyan>の好感度が０になった</color>");
+        OnEndLooking();
+    }
 
     private void LoadData()
     {
