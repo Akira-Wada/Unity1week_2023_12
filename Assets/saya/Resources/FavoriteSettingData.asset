@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102a1126e1b7fc94c8ee28ae4ef3176a, type: 3}
+  m_Name: FavoriteSettingData
+  m_EditorClassIdentifier: 
+  dataList:
+  - lowerScore: 1
+    upperScore: 20
+    waitTime: 2
+    durationTime: 1
+  - lowerScore: 21
+    upperScore: 50
+    waitTime: 5
+    durationTime: 1
+  - lowerScore: 51
+    upperScore: 70
+    waitTime: 8
+    durationTime: 2
+  - lowerScore: 71
+    upperScore: 90
+    waitTime: 10
+    durationTime: 2
+  - lowerScore: 91
+    upperScore: 100
+    waitTime: 20
+    durationTime: 3
+  - lowerScore: 101
+    upperScore: 999
+    waitTime: 20
+    durationTime: 3
