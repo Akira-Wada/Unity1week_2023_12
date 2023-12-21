@@ -635,6 +635,10 @@ PrefabInstance:
       propertyPath: _nextSceneIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4135154873628550886, guid: b0d8376fd7be7664b8c802e64628df81, type: 3}
+      propertyPath: _selectSceneIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4135154873710367075, guid: b0d8376fd7be7664b8c802e64628df81, type: 3}
       propertyPath: m_Name
       value: GameManager

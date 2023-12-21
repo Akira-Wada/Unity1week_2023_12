@@ -15,7 +15,16 @@ EditorBuildSettings:
     path: Assets/Private/Saya/Scenes/TestScene.unity
     guid: edb1527139200f54bb3b2944d8ded2fb
   - enabled: 1
-    path: Assets/Private/Saya/Scenes/TestEndScene.unity
+    path: Assets/Private/Saya/Scenes/TestDefaultEndScene.unity
     guid: e69998bf4c24b66459c3b48be706c7cd
+  - enabled: 1
+    path: Assets/Private/Saya/Scenes/TestEndScene 1.unity
+    guid: 545f5a22158571043b4f81e91f7bdb67
+  - enabled: 1
+    path: Assets/Private/Saya/Scenes/TestEndScene 2.unity
+    guid: f2709498237377b459c8d47753c3df22
+  - enabled: 1
+    path: Assets/Private/Saya/Scenes/TestEndScene 3.unity
+    guid: fe39b6904ef56274696bcb80bee74fcf
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4fca2d51e73c92840af2552f74dd95ae, type: 2}

@@ -1,14 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+/// <summary>
+/// 指定したシーンに遷移
+/// ゲームマネージャーにアタッチ
+/// </summary>
 public class SceneController : MonoBehaviour
 {
     /// <summary>
     /// Resources->SceneDataで設定した番号
-    /// 次のシーンを指定できる
+    /// 指定したシーンに移動するための番号
     /// </summary>
     [SerializeField]
-    private int _nextSceneIndex;
+    private int _selectSceneIndex;
 
     // [SerializeField]
     private int _startSceneIndex = 0;
@@ -17,9 +22,7 @@ public class SceneController : MonoBehaviour
     // [SerializeField]
     private int _defaultEndSceneIndex = 2;
 
-
     private SceneDatas _sceneDatas;
-
 
     void Awake()
     {
@@ -28,13 +31,19 @@ public class SceneController : MonoBehaviour
 
 
     /// <summary>
-    /// 次のシーンが決まっている時に使うと便利
+    /// 指定したシーンに移動できる
     /// </summary>
     /// <param name="index">
     /// Resources->SceneDataで設定した番号
     /// </param>
-    public void LoadNextScene(int index)
+    public void LoadSelectScene(int index)
     {
+        // エンドシーンなら保存
+        if(index != _startSceneIndex && index != _inGameSceneIndex)
+        {
+            RecordEndScene(index);
+        }
+        
         SceneManager.LoadScene(_sceneDatas.dataList[index].sceneName);
     }
 
@@ -51,24 +60,40 @@ public class SceneController : MonoBehaviour
 
     public void LoadDefaultEndScene()
     {
+        RecordEndScene(_defaultEndSceneIndex);
         SceneManager.LoadScene(_sceneDatas.dataList[_defaultEndSceneIndex].sceneName);
     }
 
-    // public void LoadEndScene(int index)
-    // {
-    //     foreach (var endScene in endScenes)
-    //     {
-    //         if (index <= endScene.sceneIndex)
-    //         {
-    //             SceneManager.LoadScene(endScene.sceneName);
-    //             return;
-    //         }
-    //     }
-    // }
-
-    public int GetNextSceneIndex()
+    /// <summary>
+    /// 指定したエンドシーンはすでに見たものか
+    /// </summary>
+    /// <param name="index"></param>
+    /// <returns>すでに見たならtrue</returns>
+    public bool HasSeenEndScene(int index)
     {
-        return _nextSceneIndex;
+        if(index == _startSceneIndex || index == _inGameSceneIndex)
+        {
+            Debug.LogWarning("HasSeenEndScene関数はエンドシーン以外では使えないです");
+            return false;
+        }
+
+        return PlayerPrefs.GetInt(_sceneDatas.dataList[index].sceneName, 0) == 1;
+    }
+
+    public int CountSeenEndScene()
+    {
+        int count = 0;
+        for(int i = _inGameSceneIndex + 1; i < _sceneDatas.dataList.Count; i++)
+        {
+            if (!HasSeenEndScene(i)) count++;
+        }
+
+        return count;
+    }
+
+    public int GetSelectSceneIndex()
+    {
+        return _selectSceneIndex;
     }
 
     private void LoadData()
@@ -79,5 +104,11 @@ public class SceneController : MonoBehaviour
         {
             Debug.LogWarning("SceneData is not loaded");
         }
+    }
+
+    private void RecordEndScene(int index)
+    {
+        PlayerPrefs.SetInt(_sceneDatas.dataList[index].sceneName, 1);
+        PlayerPrefs.Save();
     }
 }

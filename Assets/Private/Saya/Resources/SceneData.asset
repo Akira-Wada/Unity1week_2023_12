@@ -17,5 +17,11 @@ MonoBehaviour:
     sceneIndex: 0
   - sceneName: TestScene
     sceneIndex: 1
-  - sceneName: TestEndScene
+  - sceneName: TestDefaultEndScene
     sceneIndex: 2
+  - sceneName: TestEndScene 1
+    sceneIndex: 3
+  - sceneName: TestEndScene 2
+    sceneIndex: 4
+  - sceneName: TestEndScene 3
+    sceneIndex: 5
