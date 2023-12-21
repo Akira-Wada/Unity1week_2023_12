@@ -17,7 +17,7 @@ public class SoundVolumeSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SoundVolumeManager.instance.bgmVolume = bgmAudioSlider.value;
-        SoundVolumeManager.instance.seVolume = seAudioSlider.value;
+        GameSettingDatas.instance.bgmVolume = bgmAudioSlider.value;
+        GameSettingDatas.instance.seVolume = seAudioSlider.value;
     }
 }
