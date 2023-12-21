@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4135154873710367085}
   - component: {fileID: 4135154873710367084}
   - component: {fileID: 4135154873710367086}
+  - component: {fileID: 4135154873628550886}
+  - component: {fileID: 4135154873628550890}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -61,3 +63,29 @@ MonoBehaviour:
   hiroin2: {fileID: 0}
   hiroin3: {fileID: 0}
   hiroin4: {fileID: 0}
+--- !u!114 &4135154873628550886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4135154873710367075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30a94616dd4ead47b7863f37ba0a275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextSceneIndex: 0
+--- !u!114 &4135154873628550890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4135154873710367075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a49cacd333be12458b6ebb941ebe245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneController: {fileID: 4135154873628550886}
