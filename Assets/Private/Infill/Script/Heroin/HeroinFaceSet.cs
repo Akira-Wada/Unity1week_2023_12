@@ -8,11 +8,9 @@ public class HeroinFaceSet : MonoBehaviour
     [SerializeField,Header("表情リスト")] private List<GameObject> faces = new List<GameObject>();
 
     [SerializeField,Header("閾値")] private List<int> favoliteThreshold = new List<int>();
-    public int face;           //現在の顔
+    public int face;            //現在の顔
     private int minThreshold;   //現在の顔の閾値下限
     private int maxThreshold;   //現在の顔の閾値上限
-
-    public int debug;
 
     private void Start()
     {
@@ -22,17 +20,22 @@ public class HeroinFaceSet : MonoBehaviour
         //初期セット
         CheckFace();
     }
-    private void Update() {
-        SetFace(debug);
-    }
+
+    /// <summary>
+    /// 好感度変動時に顔面が変わる場合に変える
+    /// </summary>
+    /// <param name="favolitePoint">
+    /// 好感度</param>
     public void SetFace(int favolitePoint)
     {
         //下限ツッパした時
         if(favolitePoint < minThreshold)
         {
+            //０だった場合AugumentOutOfRangeするので回避
             if(face != 0)
             {
                 face--;
+                //もし今好感度が０になったなら
                 if(face == 0)
                 {
                     minThreshold = 0;
@@ -44,6 +47,7 @@ public class HeroinFaceSet : MonoBehaviour
                     maxThreshold = favoliteThreshold[face];
                 }
             }
+            //顔面更新
             CheckFace();    
         }
         //上限ツッパ
@@ -56,9 +60,14 @@ public class HeroinFaceSet : MonoBehaviour
                 minThreshold = favoliteThreshold[face - 1];
                 maxThreshold = favoliteThreshold[face];
             }
+            //顔面更新
             CheckFace();    
         }
     }
+    
+    /// <summary>
+    /// 顔面更新
+    /// </summary>
     private void CheckFace()
     {
         for(int i = 0; i < faces.Count; i++)
