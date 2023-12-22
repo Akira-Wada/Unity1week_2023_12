@@ -68,4 +68,8 @@ public class InputReceiver : MonoBehaviour
         if (!context.performed) return;
         playerLook.ChangeDirection(Direction.Down);
     }
+    public void OnPushSpace(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+    }
 }
