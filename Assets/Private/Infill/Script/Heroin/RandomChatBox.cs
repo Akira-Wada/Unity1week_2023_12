@@ -21,19 +21,19 @@ public class RandomChatBox : MonoBehaviour
     [SerializeField] private GameObject rightChatBoxParent;
     [SerializeField] private GameObject leftChatBoxParent;
     [SerializeField] private GameObject upChatBoxParent;
-    private List<Image> rightChatBox = new List<Image>();
-    private List<Image> leftChatBox = new List<Image>();
-    private List<Image> upChatBox = new List<Image>();
+    private List<GameObject> rightChatBox = new List<GameObject>();
+    private List<GameObject> leftChatBox = new List<GameObject>();
+    [SerializeField]private List<GameObject> upChatBox = new List<GameObject>();
     [SerializeField]private Animator rightAnimator;
     [SerializeField]private Animator leftAnimator;
     [SerializeField]private Animator upAnimator;
 
     //現在の表示吹きだしの状態
     private ChatBoxState chatBoxState;
-    private Direction chatBoxDirection;
+    [SerializeField]private Direction chatBoxDirection;
     private GameObject nowActiveChatBox;
     private int topChatBox = 0;
-    List<Image> nowActiveChatBoxList = new List<Image>();
+    [SerializeField]List<GameObject> nowActiveChatBoxList = new List<GameObject>();
 
     //吹きだし出現タイマー
     private float boxPopTimer = 0f;
@@ -67,9 +67,9 @@ public class RandomChatBox : MonoBehaviour
         chatBoxState = ChatBoxState.NotActive;
         chatBoxDirection = Direction.Idle;
         //リスト追加
-        foreach (Transform child in rightChatBoxParent.transform) rightChatBox.Add(child.GetComponent<Image>());
-        foreach (Transform child in leftChatBoxParent.transform) leftChatBox.Add(child.GetComponent<Image>());
-        foreach (Transform child in upChatBoxParent.transform) upChatBox.Add(child.GetComponent<Image>());
+        foreach (Transform child in rightChatBoxParent.transform) rightChatBox.Add(child.gameObject);
+        foreach (Transform child in leftChatBoxParent.transform) leftChatBox.Add(child.gameObject);
+        foreach (Transform child in upChatBoxParent.transform) upChatBox.Add(child.gameObject);
         // rightAnimator = rightChatBoxParent.GetComponent<Animator>();
         // leftAnimator = leftChatBoxParent.GetComponent<Animator>();
         // upAnimator = upChatBoxParent.GetComponent<Animator>();
@@ -94,24 +94,27 @@ public class RandomChatBox : MonoBehaviour
         {
             Debug.Log("BoxCheck");
             boxPopTimer = 0f;
-            ChatBoxStateChange(ChatBoxState.Idle);
-            boxPosition = Random.Range(0, 3);
-            Debug.Log($"chatbox:{boxPosition}");
+            boxPosition = Random.Range(0, 4);
             switch(boxPosition)
             {
                 //Left
                 case 0:
                     StartChatBox(leftChatBoxParent,leftChatBox);
                     chatBoxDirection = Direction.Left;
+                    ChatBoxStateChange(ChatBoxState.Idle);
                     break;
                 //Right
                 case 1:
                     StartChatBox(rightChatBoxParent,rightChatBox);
                     chatBoxDirection = Direction.Right;
+                    ChatBoxStateChange(ChatBoxState.Idle);
                     break;
                 case 2:
                     chatBoxDirection = Direction.Up;
                     StartChatBox(upChatBoxParent,upChatBox);
+                    ChatBoxStateChange(ChatBoxState.Idle);
+                    break;
+                case 3:
                     break;
                 //Error
                 default:
@@ -153,19 +156,19 @@ public class RandomChatBox : MonoBehaviour
     ///<summary>
     ///ChatBoxによる妨害を開始する
     ///</sumamry>
-    private void StartChatBox(GameObject activeObjectParent,List<Image> activeList)
+    private void StartChatBox(GameObject activeObjectParent,List<GameObject> activeList)
     {
         Debug.Log("Start");
         nowActiveChatBox = activeObjectParent;
         nowActiveChatBoxList = activeList;
         SetActiveForListAll(activeList, true);
     }
-    private void SetActiveForListAll(List<Image> list, bool setBool)
+    private void SetActiveForListAll(List<GameObject> list, bool setBool)
     {
         Debug.Log("ResetList");
-        foreach (Image image in list) image.gameObject.SetActive(setBool);
+        foreach (GameObject item in list) item.SetActive(setBool);
     }
-    private void RepopChatBox(GameObject activeObject,List<Image> activeList)
+    private void RepopChatBox(GameObject activeObject,List<GameObject> activeList)
     {
         Debug.Log("Repop");
         ChatBoxStateChange(ChatBoxState.Repop);
