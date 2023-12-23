@@ -30,12 +30,12 @@ public class RandomChatBox : MonoBehaviour
 
     //現在の表示吹きだしの状態
     public ChatBoxState chatBoxState;
-    private Direction chatBoxDirection;
-    private GameObject nowActiveChatBox;
+    [SerializeField]private Direction chatBoxDirection;
+    [SerializeField]private GameObject nowActiveChatBox;
     private int topChatBox = 0;
-    List<Image> nowActiveChatBoxList = new List<Image>();
+    [SerializeField]List<Image> nowActiveChatBoxList = new List<Image>();
     //吹きだし出現タイマー
-    private float boxPopTimer = 0f;
+    [SerializeField]private float boxPopTimer = 0f;
 
     //見てる時間タイマー
     public float lookingTimer = 0f;
@@ -56,6 +56,10 @@ public class RandomChatBox : MonoBehaviour
 
     //見ている方向取得
     [SerializeField,Header("Script")] private PlayerLook playerLook;
+
+    //シーン遷移用Index
+    private const int INDEX = 0;
+    [SerializeField]SceneController sceneController;
 
 
     private void Start() {
@@ -87,9 +91,11 @@ public class RandomChatBox : MonoBehaviour
         //出現タイマー
         if(boxPopTimer > PopTime && chatBoxState == ChatBoxState.NotActive)
         {
+            Debug.Log("BoxCheck");
             boxPopTimer = 0f;
+            ChatBoxStateChange(ChatBoxState.Idle);
             boxPosition = Random.Range(0, 3);
-
+            Debug.Log($"chatbox:{boxPosition}");
             switch(boxPosition)
             {
                 //Left
@@ -115,7 +121,7 @@ public class RandomChatBox : MonoBehaviour
         //今プレイヤーが見ている方向と吹き出し方向の確認
         if (chatBoxDirection == playerLook.GetDirection())
         {
-            chatBoxState = ChatBoxState.Looking;
+            ChatBoxStateChange(ChatBoxState.Looking);
         }
         //吹き出し削除
         if (lookingTimer > lookingTime && chatBoxState == ChatBoxState.Looking)
@@ -125,22 +131,21 @@ public class RandomChatBox : MonoBehaviour
             nowActiveChatBoxList[topChatBox].gameObject.SetActive(false);
             topChatBox++;
             //もし吹き出しが全部消せたら
-            Debug.Log($"topChatbox:{topChatBox},nowActiveChatBoxList{nowActiveChatBoxList.Count}");
             if(topChatBox == nowActiveChatBoxList.Count)
             {
                 RemoveChatBox();
             }
-            //もし吹きだし削除中に別方向を向いたら
-            if(chatBoxDirection != playerLook.GetDirection() && chatBoxDirection != Direction.Idle)
-            {
-                chatBoxState = ChatBoxState.Repop;
-                RepopChatBox(nowActiveChatBox, nowActiveChatBoxList);
-            }
+        }
+        //もし吹きだし削除中に別方向を向いたら
+        if(chatBoxDirection != playerLook.GetDirection() && chatBoxState == ChatBoxState.Looking)
+        {
+            RepopChatBox(nowActiveChatBox, nowActiveChatBoxList);
         }
         //吹き出しを放置した時
         if(nonLookingTimer > nonLookingTime)
         {
             //茶化しエンド
+            sceneController.LoadSelectScene(INDEX);
         }
     }
     ///<summary>
@@ -160,7 +165,6 @@ public class RandomChatBox : MonoBehaviour
     private void StartChatBox(GameObject activeObjectParent,List<Image> activeList)
     {
         Debug.Log("Start");
-        chatBoxState = ChatBoxState.Move;
         nowActiveChatBox = activeObjectParent;
         nowActiveChatBoxList = activeList;
         SetActiveForListAll(activeList, true);
@@ -169,27 +173,32 @@ public class RandomChatBox : MonoBehaviour
     {
         Debug.Log("ResetList");
         foreach (Image image in list) image.gameObject.SetActive(setBool);
-        if(setBool)
-        {
-            chatBoxState = ChatBoxState.Idle;
-        }
     }
     private void RepopChatBox(GameObject activeObject,List<Image> activeList)
     {
         Debug.Log("Repop");
-        chatBoxState = ChatBoxState.Repop;
+        ChatBoxStateChange(ChatBoxState.Repop);
         topChatBox = 0;
+        lookingTimer = 0f;
         StartChatBox(activeObject,activeList);
+        ChatBoxStateChange(ChatBoxState.Idle);
     }
     private void RemoveChatBox()
     {
         Debug.Log("Remove");
         topChatBox = 0;
         SetActiveForListAll(nowActiveChatBoxList, false);
-        chatBoxState = ChatBoxState.NotActive;
-        chatBoxDirection = Direction.Idle;
+        ChatBoxStateChange(ChatBoxState.NotActive);
 
         //現在の情報初期化
         topChatBox = 0;
+        boxPopTimer = 0f;
+        ChatBoxStateChange(ChatBoxState.NotActive);
+        chatBoxDirection = Direction.Idle;
+    }
+    void ChatBoxStateChange(ChatBoxState chat)
+    {
+        Debug.Log($"ChatBoxState:{chat}");
+        chatBoxState = chat;
     }
 }

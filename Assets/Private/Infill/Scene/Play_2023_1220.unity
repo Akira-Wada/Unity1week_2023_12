@@ -533,6 +533,73 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147967435}
   m_CullTransparentMesh: 1
+--- !u!1 &215328036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1423257045, guid: 0084151b63469444ebd3215818465c85, type: 3}
+  m_PrefabInstance: {fileID: 1653402393457157146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &215328038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1423257047, guid: 0084151b63469444ebd3215818465c85, type: 3}
+  m_PrefabInstance: {fileID: 1653402393457157146}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215328036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30a94616dd4ead47b7863f37ba0a275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &394582132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394582133}
+  - component: {fileID: 394582134}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &394582133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394582132}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 471264432}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &394582134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394582132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afa9507d47d17348893e782c46da32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneController: {fileID: 215328038}
+  timeLimit: 1
+--- !u!4 &471264432 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1653402392451622011, guid: 0084151b63469444ebd3215818465c85, type: 3}
+  m_PrefabInstance: {fileID: 1653402393457157146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &732297139 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1653402393243672440, guid: 0084151b63469444ebd3215818465c85, type: 3}
@@ -799,7 +866,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1242, y: -225}
+  m_AnchoredPosition: {x: -1389, y: -225}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1552800256 stripped
@@ -842,7 +909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1242, y: -225}
+  m_AnchoredPosition: {x: 8, y: 743}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1979797387 stripped
@@ -961,7 +1028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1105, y: -225}
+  m_AnchoredPosition: {x: 1403, y: -225}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2069668506
@@ -1260,6 +1327,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 39937708, guid: 0084151b63469444ebd3215818465c85, type: 3}
+      propertyPath: _hiroinObject
+      value: 
+      objectReference: {fileID: 215328036}
     - target: {fileID: 1653402392451622010, guid: 0084151b63469444ebd3215818465c85, type: 3}
       propertyPath: m_Name
       value: Manager
@@ -1325,6 +1396,10 @@ PrefabInstance:
       propertyPath: playerLook
       value: 
       objectReference: {fileID: 732297139}
+    - target: {fileID: 3621249452211604869, guid: 91ad033825be55a4e8ec123bfbbc9221, type: 3}
+      propertyPath: sceneController
+      value: 
+      objectReference: {fileID: 215328038}
     - target: {fileID: 3621249452211604869, guid: 91ad033825be55a4e8ec123bfbbc9221, type: 3}
       propertyPath: upChatBoxParent
       value: 
