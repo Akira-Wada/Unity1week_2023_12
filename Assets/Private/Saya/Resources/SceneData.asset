@@ -15,7 +15,7 @@ MonoBehaviour:
   dataList:
   - sceneName: Title
     sceneIndex: 0
-  - sceneName: TestScene
+  - sceneName: GameScene
     sceneIndex: 1
   - sceneName: TestDefaultEndScene
     sceneIndex: 2

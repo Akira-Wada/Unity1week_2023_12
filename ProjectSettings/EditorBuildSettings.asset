@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 3a0ae310347248a4984455dae700effd
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 9804534528eaa4904a2978a1e38d153b
+  - enabled: 1
     path: Assets/Private/Saya/Scenes/TestStartScene.unity
     guid: b91d6dc623d7485478485cee008bfb18
   - enabled: 1
