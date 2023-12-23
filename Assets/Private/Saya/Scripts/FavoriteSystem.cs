@@ -29,12 +29,15 @@ public class FavoriteSystem : MonoBehaviour
     [SerializeField]public GameObject _hiroinObject;
 
     [SerializeField]private GameEndScript _gameEndScript;
+    [SerializeField]private HeroinFaceSet _heroinFaceSet;
 
 
     void Start()
     {
         LoadData();   
-        _favoriteParamScript = _hiroinObject.GetComponent<FavoriteParam>();     
+        _favoriteParamScript = _hiroinObject.GetComponent<FavoriteParam>();   
+        _heroinFaceSet.SetFace((int)GetFavoriteStatus() - 2);
+        Debug.Log((int)GetFavoriteStatus() - 2);
     }
 
     void Update()
@@ -53,6 +56,7 @@ public class FavoriteSystem : MonoBehaviour
             {
                 _countDurationTime = 0;
                 _current_favorite = _favoriteParamScript.Get();
+                _heroinFaceSet.SetFace((int)GetFavoriteStatus() - 2);
                 VaryFavorite();
 
                 Debug.Log(_hiroinObject.name + "の好感度：" + _favoriteParamScript.Get());

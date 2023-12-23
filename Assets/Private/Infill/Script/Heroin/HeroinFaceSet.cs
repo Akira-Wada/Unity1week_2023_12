@@ -29,7 +29,6 @@ public class HeroinFaceSet : MonoBehaviour
     public void SetFace(int _face)
     {
         face = _face;
-        face = (int)_favoriteSystem.GetFavoriteStatus();
         CheckFace();
     }
     
