@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SceneData
   m_EditorClassIdentifier: 
   dataList:
-  - sceneName: TestStartScene
+  - sceneName: Title
     sceneIndex: 0
   - sceneName: TestScene
     sceneIndex: 1
