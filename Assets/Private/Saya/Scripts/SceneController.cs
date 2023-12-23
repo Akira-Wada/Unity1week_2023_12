@@ -12,15 +12,15 @@ public class SceneController : MonoBehaviour
     /// Resources->SceneDataで設定した番号
     /// 指定したシーンに移動するための番号
     /// </summary>
-    [SerializeField]
-    private int _selectSceneIndex;
+    [SerializeField, Header("テスト用")]
+    private int _Test_selectSceneIndex;
 
     // [SerializeField]
     private int _startSceneIndex = 0;
     // [SerializeField]
     private int _inGameSceneIndex = 1;
     // [SerializeField]
-    private int _defaultEndSceneIndex = 2;
+    private int _albamSceneIndex = 2;
 
     private SceneDatas _sceneDatas;
 
@@ -58,10 +58,10 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(_sceneDatas.dataList[_inGameSceneIndex].sceneName);
     }
 
-    public void LoadDefaultEndScene()
+    public void LoadAlbamScene()
     {
-        RecordEndScene(_defaultEndSceneIndex);
-        SceneManager.LoadScene(_sceneDatas.dataList[_defaultEndSceneIndex].sceneName);
+        RecordEndScene(_albamSceneIndex);
+        SceneManager.LoadScene(_sceneDatas.dataList[_albamSceneIndex].sceneName);
     }
 
     /// <summary>
@@ -93,7 +93,7 @@ public class SceneController : MonoBehaviour
 
     public int GetSelectSceneIndex()
     {
-        return _selectSceneIndex;
+        return _Test_selectSceneIndex;
     }
 
     private void LoadData()
