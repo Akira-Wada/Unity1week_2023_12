@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AlbumManager : MonoBehaviour
+public class EndingSceneScript : MonoBehaviour
 {
     [SerializeField] private SceneController _sceneController;
+
     private Text _endText;
     private SceneDatas _sceneDatas;
 
@@ -13,12 +14,12 @@ public class AlbumManager : MonoBehaviour
     {
         _endText = GetComponent<Text>();
         LoadData();
-        WriteEndNumText();
+        WriteEndNumberText();
     }
 
-    public void WriteEndNumText()
+    public void WriteEndNumberText()
     {
-        _endText.text = _sceneController.CountSeenScene() + " / " + _sceneController.CountTotalEndNum();
+        _endText.text = "No." + (_sceneController.GetSceneIndex() - _sceneController.GetOtherThanEndIndex() + 1);
     }
 
     private void LoadData()
