@@ -15,6 +15,8 @@ public class SceneController : MonoBehaviour
     [SerializeField, Header("テスト用")]
     private int _Test_selectSceneIndex;
 
+    [SerializeField] private int _otherThanEndSceneNum = 3;
+
     // [SerializeField]
     private int _startSceneIndex = 0;
     // [SerializeField]
@@ -93,6 +95,40 @@ public class SceneController : MonoBehaviour
     {
         return _Test_selectSceneIndex;
     }
+
+    public int CountTotalEndNum()
+    {
+        return _sceneDatas.dataList.Count - _otherThanEndSceneNum;
+    }
+
+    public int CountSeenScene()
+    {
+        int count = 0;
+        for(int i =_otherThanEndSceneNum; i < _sceneDatas.dataList.Count; i++)
+        {
+            if(HasSeenEndScene(i)) count++;
+        }
+        return count;
+    }
+
+    public int GetSceneIndex()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        foreach(var scene in _sceneDatas.dataList)
+        {
+            if(scene.sceneName == currentScene.name)
+            {
+                return scene.sceneIndex;
+            }
+        }
+        return -1;
+    }
+
+    public int GetOtherThanEndIndex()
+    {
+        return _otherThanEndSceneNum;
+    }
+
 
     private void LoadData()
     {

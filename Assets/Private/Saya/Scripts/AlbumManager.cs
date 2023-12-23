@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class AlbumManager : MonoBehaviour
 {
     [SerializeField] private SceneController _sceneController;
-    [SerializeField] private int _otherThanEndSceneNum = 3;
     private Text _endText;
     private SceneDatas _sceneDatas;
 
@@ -19,22 +18,7 @@ public class AlbumManager : MonoBehaviour
 
     public void WriteEndNumText()
     {
-        _endText.text = CountSeenScene() + " / " + CountTotalEndNum();
-    }
-
-    private int CountSeenScene()
-    {
-        int count = 0;
-        for(int i =_otherThanEndSceneNum; i < _sceneDatas.dataList.Count; i++)
-        {
-            if(_sceneController.HasSeenEndScene(i)) count++;
-        }
-        return count;
-    }
-
-    private int CountTotalEndNum()
-    {
-        return _sceneDatas.dataList.Count - _otherThanEndSceneNum;
+        _endText.text = _sceneController.CountSeenScene() + " / " + _sceneController.CountTotalEndNum();
     }
 
     private void LoadData()
