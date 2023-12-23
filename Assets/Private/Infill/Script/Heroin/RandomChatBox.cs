@@ -29,13 +29,14 @@ public class RandomChatBox : MonoBehaviour
     [SerializeField]private Animator upAnimator;
 
     //現在の表示吹きだしの状態
-    public ChatBoxState chatBoxState;
-    [SerializeField]private Direction chatBoxDirection;
-    [SerializeField]private GameObject nowActiveChatBox;
+    private ChatBoxState chatBoxState;
+    private Direction chatBoxDirection;
+    private GameObject nowActiveChatBox;
     private int topChatBox = 0;
-    [SerializeField]List<Image> nowActiveChatBoxList = new List<Image>();
+    List<Image> nowActiveChatBoxList = new List<Image>();
+
     //吹きだし出現タイマー
-    [SerializeField]private float boxPopTimer = 0f;
+    private float boxPopTimer = 0f;
 
     //見てる時間タイマー
     public float lookingTimer = 0f;
@@ -61,7 +62,6 @@ public class RandomChatBox : MonoBehaviour
     private const int INDEX = 0;
     [SerializeField]SceneController sceneController;
 
-
     private void Start() {
         //初期化
         chatBoxState = ChatBoxState.NotActive;
@@ -71,7 +71,8 @@ public class RandomChatBox : MonoBehaviour
         foreach (Transform child in leftChatBoxParent.transform) leftChatBox.Add(child.GetComponent<Image>());
         foreach (Transform child in upChatBoxParent.transform) upChatBox.Add(child.GetComponent<Image>());
         // rightAnimator = rightChatBoxParent.GetComponent<Animator>();
-        // leftAnimator = leftChatBoxparent.GetComponent<Animator>();
+        // leftAnimator = leftChatBoxParent.GetComponent<Animator>();
+        // upAnimator = upChatBoxParent.GetComponent<Animator>();
         //吹きだしの無効化
         SetActiveForListAll(rightChatBox, false);
         SetActiveForListAll(leftChatBox, false);
@@ -148,16 +149,6 @@ public class RandomChatBox : MonoBehaviour
             sceneController.LoadSelectScene(INDEX);
         }
     }
-    ///<summary>
-    ///Memo
-    ///消える-> SetActive(false) できた
-    ///も一回出す-> forしてSetActive(true)
-    ///もし視線逸らす-> forしてSetActive(true)
-    ///吹きだしを見たらListの上からSetActive(false)
-    ///削除成功-> ひっこめさせる(Animation?Transform?)とりあえず後回し
-    ///5秒タイマーは共通使用、吹きだしが出現中かつ出現方向を向いているときのみタイマーを増加させる
-    ///もしタイマーがオーバーしたら、茶化しエンドへ強制突入
-    ///</summary>
 
     ///<summary>
     ///ChatBoxによる妨害を開始する
