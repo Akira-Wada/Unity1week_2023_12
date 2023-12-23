@@ -9,10 +9,10 @@ using UnityEngine.UI;
 /// </summary>
 public class ChangePlayerImage : MonoBehaviour
 {
-    [SerializeField] private Image rightPlayer;
-    [SerializeField] private Image leftPlayer;
-    [SerializeField] private Image upPlayer;
-    [SerializeField] private Image downPlayer;
+    [SerializeField] private GameObject rightPlayer;
+    [SerializeField] private GameObject leftPlayer;
+    [SerializeField] private GameObject upPlayer;
+    [SerializeField] private GameObject downPlayer;
     private void Start()
     {
 
@@ -24,9 +24,9 @@ public class ChangePlayerImage : MonoBehaviour
     /// <param name="direction"></param>
     public void ChangePlayerAnimation(Direction direction)
     {
-        rightPlayer.gameObject.SetActive(Direction.Right == direction);
-        leftPlayer.gameObject.SetActive(Direction.Left == direction);
-        upPlayer.gameObject.SetActive(Direction.Up == direction);
-        downPlayer.gameObject.SetActive(Direction.Down == direction);
+        rightPlayer.SetActive(Direction.Right == direction);
+        leftPlayer.SetActive(Direction.Left == direction);
+        upPlayer.SetActive(Direction.Up == direction);
+        downPlayer.SetActive(Direction.Down == direction);
     }
 }
