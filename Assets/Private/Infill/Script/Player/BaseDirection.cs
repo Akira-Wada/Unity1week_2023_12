@@ -12,6 +12,7 @@ namespace BaseDirection
         Right,
         Left,
         Up,
-        Down
+        Down,
+        Idle
     }
 }
