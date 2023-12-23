@@ -6,56 +6,95 @@ public class TestSceneMove : MonoBehaviour
 {
 
     public SceneController sceneController;
+    private int num;
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            CheckEndingScene(sceneController.GetSelectSceneIndex());
-            Debug.Log(sceneController.GetSelectSceneIndex() + "番のシーンへ移動");
-            sceneController.LoadSelectScene(sceneController.GetSelectSceneIndex());
-        }
+        // if(Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     CheckEndingScene(sceneController.GetSelectSceneIndex());
+        //     Debug.Log(sceneController.GetSelectSceneIndex() + "番のシーンへ移動");
+        //     sceneController.LoadSelectScene(sceneController.GetSelectSceneIndex());
+        // }
 
         if(Input.GetKeyDown(KeyCode.Alpha0))
         {
-            CheckEndingScene(0);
-            Debug.Log("スタートシーンへ移動");
+            num = 0;
+            CheckEndingScene(num);
+            Debug.Log("タイトルシーンへ移動");
             sceneController.LoadStartScene();
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            CheckEndingScene(1);
+            num = 1;
+            CheckEndingScene(num);
             Debug.Log("インゲームシーンへ移動");
             sceneController.LoadGameScene();
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha2))
         {
-            CheckEndingScene(2);
-            Debug.Log("エンドシーンへ移行");
+            num = 2;
+            CheckEndingScene(num);
+            Debug.Log("アルバムへ移行");
             sceneController.LoadAlbamScene();
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha3))
         {
-            CheckEndingScene(3);
-            Debug.Log("エンドシーン1へ移動");
-            sceneController.LoadSelectScene(3);
+            num = 3;
+            CheckEndingScene(num);
+            Debug.Log("BadEnd1シーン1へ移動");
+            sceneController.LoadSelectScene(num);
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha4))
         {
-            CheckEndingScene(4);
-            Debug.Log("エンドシーン2へ移動");
-            sceneController.LoadSelectScene(4);
+            num = 4;
+            CheckEndingScene(num);
+            Debug.Log("BadEnd2へ移動");
+            sceneController.LoadSelectScene(num);
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha5))
         {
-            CheckEndingScene(5);
-            Debug.Log("エンドシーン3へ移行");
-            sceneController.LoadSelectScene(5);
+            num = 5;
+            CheckEndingScene(num);
+            Debug.Log("GoodEnd1へ移行");
+            sceneController.LoadSelectScene(num);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            num = 6;
+            CheckEndingScene(num);
+            Debug.Log("GoodEnd2へ移行");
+            sceneController.LoadSelectScene(num);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            num = 7;
+            CheckEndingScene(num);
+            Debug.Log("GoodEnd3へ移行");
+            sceneController.LoadSelectScene(num);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            num = 8;
+            CheckEndingScene(num);
+            Debug.Log("GoodEnd4へ移行");
+            sceneController.LoadSelectScene(num);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            num = 9;
+            CheckEndingScene(num);
+            Debug.Log("GoodEnd5へ移行");
+            sceneController.LoadSelectScene(num);
         }
     }
 

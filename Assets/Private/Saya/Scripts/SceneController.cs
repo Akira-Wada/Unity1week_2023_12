@@ -80,15 +80,13 @@ public class SceneController : MonoBehaviour
         return PlayerPrefs.GetInt(_sceneDatas.dataList[index].sceneName, 0) == 1;
     }
 
-    public int CountSeenEndScene()
+// シーン保存をクリアする
+    public void DetaClear()
     {
-        int count = 0;
-        for(int i = _inGameSceneIndex + 1; i < _sceneDatas.dataList.Count; i++)
+        for(int i = 0; i < _sceneDatas.dataList.Count; i++)
         {
-            if (!HasSeenEndScene(i)) count++;
+            PlayerPrefs.SetInt(_sceneDatas.dataList[i].sceneName, 0);
         }
-
-        return count;
     }
 
     public int GetSelectSceneIndex()

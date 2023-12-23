@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class AlbumManager : MonoBehaviour
 {
-    [SerializeField] private Text _endText;
     [SerializeField] private SceneController _sceneController;
     [SerializeField] private int _otherThanEndSceneNum = 3;
-    private FavoriteSettingDatas _favoriteSettingDatas;
+    private Text _endText;
+    private SceneDatas _sceneDatas;
 
     void Start()
     {
+        _endText = GetComponent<Text>();
         LoadData();
         WriteEndNumText();
     }
@@ -24,7 +25,7 @@ public class AlbumManager : MonoBehaviour
     private int CountSeenScene()
     {
         int count = 0;
-        for(int i = _otherThanEndSceneNum; i < _favoriteSettingDatas.dataList.Count; i++)
+        for(int i =_otherThanEndSceneNum; i < _sceneDatas.dataList.Count; i++)
         {
             if(_sceneController.HasSeenEndScene(i)) count++;
         }
@@ -33,16 +34,16 @@ public class AlbumManager : MonoBehaviour
 
     private int CountTotalEndNum()
     {
-        return _favoriteSettingDatas.dataList.Count;
+        return _sceneDatas.dataList.Count - _otherThanEndSceneNum;
     }
 
     private void LoadData()
     {
-        _favoriteSettingDatas = Resources.Load<FavoriteSettingDatas>("FavoriteSettingData");
+        _sceneDatas = Resources.Load<SceneDatas>("SceneData");
 
-        if(_favoriteSettingDatas == null)
+        if(_sceneDatas == null)
         {
-            Debug.LogWarning("FavoriteSettingDatas is not loaded");
+            Debug.LogWarning("SceneDatas is not loaded");
             return;
         }
     }

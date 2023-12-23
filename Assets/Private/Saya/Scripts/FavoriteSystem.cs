@@ -91,7 +91,6 @@ public class FavoriteSystem : MonoBehaviour
     {
         CheckFavoriteRenge(_favoriteParamScript.Get());
         return _favoriteStatus;
-        
     }
 
 
