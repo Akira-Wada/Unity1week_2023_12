@@ -34,7 +34,7 @@ public class TestSceneMove : MonoBehaviour
         {
             CheckEndingScene(2);
             Debug.Log("エンドシーンへ移行");
-            sceneController.LoadDefaultEndScene();
+            sceneController.LoadAlbamScene();
         }
 
         if(Input.GetKeyDown(KeyCode.Alpha3))
