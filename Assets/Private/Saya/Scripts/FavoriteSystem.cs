@@ -19,6 +19,8 @@ public class FavoriteSystem : MonoBehaviour
     private int _lowerScore;
     private int _upperScore;
     private float _waitTime;
+    private int _incline;
+    private int _decline;
     private float _durationTime;
     private FavoriteStatus _favoriteStatus;
 
@@ -98,7 +100,6 @@ public class FavoriteSystem : MonoBehaviour
         return _favoriteStatus;
     }
 
-
     // 好感度が０になると呼び出される
     private void OnFavoriteZero()
     {
@@ -134,17 +135,18 @@ public class FavoriteSystem : MonoBehaviour
         _waitTime = _favoriteSettingDatas.dataList[_dataIndex].waitTime;
         _durationTime = _favoriteSettingDatas.dataList[_dataIndex].durationTime;
         _favoriteStatus = _favoriteSettingDatas.dataList[_dataIndex].favoriteStatus;
+        _incline  = _favoriteSettingDatas.dataList[_dataIndex].incline;
+        _decline  = _favoriteSettingDatas.dataList[_dataIndex].decline;
     }
-
 
     private void VaryFavorite()
     {
         if(_lookingTime < _waitTime)
         {
-            _current_favorite++;
+            _current_favorite += _incline;
         }
         else{
-            _current_favorite--;
+            _current_favorite -= _decline;
         }
 
         _favoriteParamScript.Set(_current_favorite);
