@@ -15,13 +15,23 @@ MonoBehaviour:
   dataList:
   - sceneName: Title
     sceneIndex: 0
-  - sceneName: TestScene
+  - sceneName: GameScene
     sceneIndex: 1
-  - sceneName: TestDefaultEndScene
+  - sceneName: EndAlbam
     sceneIndex: 2
-  - sceneName: TestEndScene 1
+  - sceneName: BadEnd1
     sceneIndex: 3
-  - sceneName: TestEndScene 2
+  - sceneName: BadEnd2
     sceneIndex: 4
-  - sceneName: TestEndScene 3
+  - sceneName: GoodEnd1
     sceneIndex: 5
+  - sceneName: GoodEnd2
+    sceneIndex: 6
+  - sceneName: GoodEnd3
+    sceneIndex: 7
+  - sceneName: GoodEnd4
+    sceneIndex: 8
+  - sceneName: GoodEnd5
+    sceneIndex: 9
+  - sceneName: GoodEnd6
+    sceneIndex: 10

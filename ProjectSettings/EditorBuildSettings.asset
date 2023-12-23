@@ -9,22 +9,37 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Private/Saya/Scenes/TestStartScene.unity
-    guid: b91d6dc623d7485478485cee008bfb18
+    path: Assets/Scenes/Title.unity
+    guid: 3a0ae310347248a4984455dae700effd
   - enabled: 1
-    path: Assets/Private/Saya/Scenes/TestScene.unity
-    guid: edb1527139200f54bb3b2944d8ded2fb
+    path: Assets/Scenes/GameScene.unity
+    guid: 9804534528eaa4904a2978a1e38d153b
   - enabled: 1
-    path: Assets/Private/Saya/Scenes/TestDefaultEndScene.unity
-    guid: e69998bf4c24b66459c3b48be706c7cd
+    path: Assets/Scenes/EndAlbam.unity
+    guid: 35a297da596ad724b85af527b04931af
   - enabled: 1
-    path: Assets/Private/Saya/Scenes/TestEndScene 1.unity
-    guid: 545f5a22158571043b4f81e91f7bdb67
+    path: Assets/Scenes/BadEnd1.unity
+    guid: 5edaa57ea22f950428f4f12d9e325784
   - enabled: 1
-    path: Assets/Private/Saya/Scenes/TestEndScene 2.unity
-    guid: f2709498237377b459c8d47753c3df22
+    path: Assets/Scenes/BadEnd2.unity
+    guid: e2925ee2a4c77274fa144da3b2ce3b7b
   - enabled: 1
-    path: Assets/Private/Saya/Scenes/TestEndScene 3.unity
-    guid: fe39b6904ef56274696bcb80bee74fcf
+    path: Assets/Scenes/GoodEnd1.unity
+    guid: 98d593d2496da944a8a050f3fc9cdf7e
+  - enabled: 1
+    path: Assets/Scenes/GoodEnd2.unity
+    guid: 52eb916006f5dfb498ab99b9e10eb737
+  - enabled: 1
+    path: Assets/Scenes/GoodEnd3.unity
+    guid: f53db59abbc05954d807b95ac2126800
+  - enabled: 1
+    path: Assets/Scenes/GoodEnd4.unity
+    guid: acc52dc203d3c5742b9e2b71d82b306a
+  - enabled: 1
+    path: Assets/Scenes/GoodEnd5.unity
+    guid: 0e2e6a6bc3341584ea0f1d6ec1f98bea
+  - enabled: 1
+    path: Assets/Scenes/GoodEnd6.unity
+    guid: bc009ec6778cdd44fbb9a8ec1f50e846
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4fca2d51e73c92840af2552f74dd95ae, type: 2}
