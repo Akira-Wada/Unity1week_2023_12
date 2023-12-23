@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hiroinObject: {fileID: 560506817}
+  _gameEndScript: {fileID: 1423257048}
 --- !u!1 &40676274
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd881ff679b73d4b8e6709fdea8fe11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _favorite: 50
+  _favorite: 2
 --- !u!1 &568522626
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +793,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 560506817}
     - target: {fileID: 1653402392093071216, guid: 0084151b63469444ebd3215818465c85, type: 3}
+      propertyPath: _gameEndScript
+      value: 
+      objectReference: {fileID: 1423257048}
+    - target: {fileID: 1653402392093071216, guid: 0084151b63469444ebd3215818465c85, type: 3}
       propertyPath: favoriteSystem
       value: 
       objectReference: {fileID: 39937708}
@@ -1265,6 +1270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423257046}
   - component: {fileID: 1423257047}
+  - component: {fileID: 1423257048}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -1300,6 +1306,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Test_selectSceneIndex: 0
+--- !u!114 &1423257048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423257045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4764f9784607c7b438c83d69b22dd26c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _favoriteSystem: {fileID: 39937708}
+  _sceneController: {fileID: 1423257047}
+  _otherThanEndSceneNum: 3
 --- !u!1 &1514764710
 GameObject:
   m_ObjectHideFlags: 0
