@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd881ff679b73d4b8e6709fdea8fe11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _favorite: 19
+  _favorite: 20
 --- !u!114 &560506820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,6 +745,10 @@ PrefabInstance:
       propertyPath: _hiroinObject
       value: 
       objectReference: {fileID: 560506817}
+    - target: {fileID: 39937708, guid: 0084151b63469444ebd3215818465c85, type: 3}
+      propertyPath: _heroinFaceSet
+      value: 
+      objectReference: {fileID: 560506820}
     - target: {fileID: 1653402392451622010, guid: 0084151b63469444ebd3215818465c85, type: 3}
       propertyPath: m_Name
       value: Manager
