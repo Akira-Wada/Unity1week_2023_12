@@ -20,12 +20,15 @@ public class FavoriteSystem : MonoBehaviour
     private int _upperScore;
     private float _waitTime;
     private float _durationTime;
+    private FavoriteStatus _favoriteStatus;
 
 
     private FavoriteParam _favoriteParamScript;
     private int _current_favorite;
 
-    private GameObject _hiroinObject;
+    [SerializeField]public GameObject _hiroinObject;
+
+    [SerializeField]private GameEndScript _gameEndScript;
 
 
     void Start()
@@ -39,7 +42,7 @@ public class FavoriteSystem : MonoBehaviour
         {
             _lookingTime += Time.deltaTime;
             _countDurationTime += Time.deltaTime;
-            CheckFavoriteRenge();
+            CheckFavoriteRenge(_favoriteParamScript.Get());
 
             if(_countDurationTime < _durationTime)
             {
@@ -54,7 +57,6 @@ public class FavoriteSystem : MonoBehaviour
                 Debug.Log(_hiroinObject.name + "の好感度：" + _favoriteParamScript.Get());
             }
         }
-        
     }
 
     /// <summary>
@@ -64,10 +66,9 @@ public class FavoriteSystem : MonoBehaviour
     /// 計測対象をGameObjectで取得
     /// 取得するGameObjectにはFavoriteParamスクリプトがアタッチされている必要がある
     /// </param>
-    public void OnLooking(GameObject hiroin)
+    public void OnLooking()
     {
-        _hiroinObject = hiroin;
-        _favoriteParamScript = hiroin.GetComponent<FavoriteParam>();
+        _favoriteParamScript = _hiroinObject.GetComponent<FavoriteParam>();
         _current_favorite = _favoriteParamScript.Get();
 
         // 好感度が０になると発火する関数を格納
@@ -86,6 +87,12 @@ public class FavoriteSystem : MonoBehaviour
         _isLooking = false;
     }
 
+    public FavoriteStatus GetFavoriteStatus()
+    {
+        CheckFavoriteRenge(_favoriteParamScript.Get());
+        return _favoriteStatus;
+        
+    }
 
 
     // 好感度が０になると呼び出される
@@ -93,6 +100,7 @@ public class FavoriteSystem : MonoBehaviour
     {
         Debug.Log(_hiroinObject.name + "<color=cyan>の好感度が０になった</color>");
         OnEndLooking();
+        _gameEndScript.BadEnd1();
     }
 
     private void LoadData()
@@ -106,11 +114,11 @@ public class FavoriteSystem : MonoBehaviour
         }
     }
 
-    private void CheckFavoriteRenge()
+    private void CheckFavoriteRenge(int currentFavorite)
     {
         for(int i = 0; i < _favoriteSettingDatas.dataList.Count; i++)
         {
-            if(_current_favorite >= _favoriteSettingDatas.dataList[i].lowerScore && _current_favorite <= _favoriteSettingDatas.dataList[i].upperScore)
+            if(currentFavorite >= _favoriteSettingDatas.dataList[i].lowerScore && currentFavorite <= _favoriteSettingDatas.dataList[i].upperScore)
             {
                 _dataIndex = i;
                 break;
@@ -121,6 +129,7 @@ public class FavoriteSystem : MonoBehaviour
         _upperScore = _favoriteSettingDatas.dataList[_dataIndex].upperScore;
         _waitTime = _favoriteSettingDatas.dataList[_dataIndex].waitTime;
         _durationTime = _favoriteSettingDatas.dataList[_dataIndex].durationTime;
+        _favoriteStatus = _favoriteSettingDatas.dataList[_dataIndex].favoriteStatus;
     }
 
 
@@ -136,6 +145,5 @@ public class FavoriteSystem : MonoBehaviour
 
         _favoriteParamScript.Set(_current_favorite);
     }
-    
 }
 

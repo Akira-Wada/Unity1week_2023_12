@@ -12,6 +12,7 @@ using BaseDirection;
 public class InputReceiver : MonoBehaviour
 {
     [SerializeField]public PlayerLook playerLook;
+    [SerializeField]private GameEndScript _gameEndScript;
     private void Awake() 
     {
         //もしセットされていなかった場合は検索してセット
@@ -71,5 +72,6 @@ public class InputReceiver : MonoBehaviour
     public void OnPushSpace(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
+        _gameEndScript.GoodEnd();
     }
 }

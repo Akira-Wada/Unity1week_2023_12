@@ -14,6 +14,7 @@ public class PlayerLook : MonoBehaviour
 
     //キャラクターの方向変換スクリプト
     [SerializeField] private ChangePlayerImage changePlayerImage;
+    [SerializeField] private FavoriteSystem favoriteSystem;
 
 
     // Start is called before the first frame update
@@ -32,6 +33,16 @@ public class PlayerLook : MonoBehaviour
         if (direction == inputDirection) return;
 
         direction = inputDirection;
+        
+        if (direction == Direction.Down)
+        {
+            favoriteSystem.OnLooking();
+        }
+        else
+        {
+            favoriteSystem.OnEndLooking();
+        }
+
         changePlayerImage.ChangePlayerAnimation(direction);
     }
     

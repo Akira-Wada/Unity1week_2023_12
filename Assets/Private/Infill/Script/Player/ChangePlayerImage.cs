@@ -13,6 +13,7 @@ public class ChangePlayerImage : MonoBehaviour
     [SerializeField] private GameObject leftPlayer;
     [SerializeField] private GameObject upPlayer;
     [SerializeField] private GameObject downPlayer;
+    [SerializeField] private GameObject defaultPlayer;
     private void Start()
     {
 
@@ -28,5 +29,7 @@ public class ChangePlayerImage : MonoBehaviour
         leftPlayer.SetActive(Direction.Left == direction);
         upPlayer.SetActive(Direction.Up == direction);
         downPlayer.SetActive(Direction.Down == direction);
+
+        defaultPlayer.SetActive(false);
     }
 }

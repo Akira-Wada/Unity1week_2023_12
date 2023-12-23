@@ -18,6 +18,7 @@ public class FavoriteSettingDatas : ScriptableObject
         public float waitTime;
         [Header("好感度変動の間隔[s]")]
         public float durationTime;
+        public FavoriteStatus favoriteStatus;
     }
 
 }
