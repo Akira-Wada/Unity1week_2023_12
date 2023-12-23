@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hiroinObject: {fileID: 0}
   _gameEndScript: {fileID: 1423257048}
+  _heroinFaceSet: {fileID: 0}
 --- !u!1 &1423257045
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,6 +58,7 @@ GameObject:
   - component: {fileID: 1423257046}
   - component: {fileID: 1423257047}
   - component: {fileID: 1423257048}
+  - component: {fileID: 1045955005}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -92,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Test_selectSceneIndex: 0
+  _otherThanEndSceneNum: 3
 --- !u!114 &1423257048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +110,19 @@ MonoBehaviour:
   _favoriteSystem: {fileID: 39937708}
   _sceneController: {fileID: 1423257047}
   _otherThanEndSceneNum: 3
+--- !u!114 &1045955005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423257045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a49cacd333be12458b6ebb941ebe245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneController: {fileID: 1423257047}
 --- !u!1 &1653402392451622010
 GameObject:
   m_ObjectHideFlags: 0
