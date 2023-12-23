@@ -27,6 +27,7 @@ public class ChangePlayerImage : MonoBehaviour
     /// <param name="direction"></param>
     private void FixedUpdate() {
         if (nowDirection == Direction.Down) timer += Time.deltaTime;
+        else timer = 0;
         if (timer > thresholdLookTime)
         {
             timer = 0;
@@ -36,6 +37,7 @@ public class ChangePlayerImage : MonoBehaviour
     }
     public void ChangePlayerAnimation(Direction direction)
     {
+        nowDirection = direction;
         rightPlayer.SetActive(Direction.Right == direction);
         leftPlayer.SetActive(Direction.Left == direction);
         upPlayer.SetActive(Direction.Up == direction);
