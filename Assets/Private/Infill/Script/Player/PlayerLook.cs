@@ -16,6 +16,9 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] private ChangePlayerImage changePlayerImage;
     [SerializeField] private FavoriteSystem favoriteSystem;
 
+    //SE鳴らす
+    [SerializeField] private AudioSource audioSource;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,7 @@ public class PlayerLook : MonoBehaviour
     {
         if (direction == inputDirection) return;
 
+        audioSource.Play();
         direction = inputDirection;
         
         if (direction == Direction.Down)
