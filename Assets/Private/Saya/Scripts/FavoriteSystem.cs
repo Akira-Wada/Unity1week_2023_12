@@ -33,7 +33,8 @@ public class FavoriteSystem : MonoBehaviour
 
     void Start()
     {
-        LoadData();        
+        LoadData();   
+        _favoriteParamScript = _hiroinObject.GetComponent<FavoriteParam>();     
     }
 
     void Update()
