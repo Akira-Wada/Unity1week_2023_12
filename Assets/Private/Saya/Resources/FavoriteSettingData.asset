@@ -38,7 +38,7 @@ MonoBehaviour:
     upperScore: 90
     waitTime: 2
     durationTime: 1
-    incline: 5
+    incline: 6
     decline: 15
     favoriteStatus: 5
   - lowerScore: 91
