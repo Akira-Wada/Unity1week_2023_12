@@ -2645,8 +2645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef26b4ffe8673a4cad83dfa597c722a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 60
-  _OtherEnd4Time: 5
+  timeLimit: 50
+  _OtherEnd4Time: 8
   _timeImage: {fileID: 263176503}
   _gameEndScript: {fileID: 168049943}
   _playerLook: {fileID: 1216676416}
