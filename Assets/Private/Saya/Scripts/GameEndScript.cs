@@ -1,12 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BaseDirection;
 
 public class GameEndScript : MonoBehaviour
 {
     [SerializeField] private FavoriteSystem _favoriteSystem;
     [SerializeField] private SceneController _sceneController;
+    [SerializeField] private PlayerLook _playerLook;
     [SerializeField] private int _otherThanEndSceneNum = 3;
+    
+
+    private PlayerLook _nowDirection;
+
+    public void ConfessionEnd()
+    {
+        Direction _nowDirection = _playerLook.GetDirection();
+        switch(_nowDirection)
+        {
+            case Direction.Right:
+                Debug.Log("RightEnd");
+                break;
+            case Direction.Left:
+                Debug.Log("RightEnd");
+                break;
+            case Direction.Down:
+                GoodEnd();
+                break;
+            case Direction.Up:
+                Debug.Log("RightEnd");
+                break;
+
+        }
+    }
 
     public void GoodEnd()
     {

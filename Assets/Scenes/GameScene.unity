@@ -1208,6 +1208,10 @@ PrefabInstance:
       propertyPath: _heroinFaceSet
       value: 
       objectReference: {fileID: 560506820}
+    - target: {fileID: 1423257048, guid: 0084151b63469444ebd3215818465c85, type: 3}
+      propertyPath: _playerLook
+      value: 
+      objectReference: {fileID: 1216676416}
     - target: {fileID: 1653402392093071229, guid: 0084151b63469444ebd3215818465c85, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 19

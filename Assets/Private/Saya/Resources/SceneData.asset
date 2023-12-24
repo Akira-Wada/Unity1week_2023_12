@@ -35,3 +35,7 @@ MonoBehaviour:
     sceneIndex: 9
   - sceneName: GoodEnd6
     sceneIndex: 10
+  - sceneName: OtherEnd1
+    sceneIndex: 11
+  - sceneName: OtherEnd2
+    sceneIndex: 12

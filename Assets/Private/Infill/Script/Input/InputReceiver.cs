@@ -72,6 +72,6 @@ public class InputReceiver : MonoBehaviour
     public void OnPushSpace(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        _gameEndScript.GoodEnd();
+        _gameEndScript.ConfessionEnd();
     }
 }
