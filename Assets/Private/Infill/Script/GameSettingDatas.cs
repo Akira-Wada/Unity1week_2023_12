@@ -11,8 +11,8 @@ public class GameSettingDatas : MonoBehaviour
     public static GameSettingDatas instance;
 
     //AudioVolume
-    public float bgmVolume = 1f;
-    public float seVolume = 1f;
+    public float bgmVolume;
+    public float seVolume;
     
     
     private void Awake() {
