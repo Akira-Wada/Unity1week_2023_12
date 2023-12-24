@@ -9,11 +9,17 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Inter
+  - Inter2
   fallbackFontReferences:
+  - {fileID: 12800000, guid: fa9e405ef150bc8468d12c46f6bf0d8f, type: 3}
+  - {fileID: 12800000, guid: cc2a9e55912573f47aafdd1832f810c4, type: 3}
   - {fileID: 12800000, guid: b5261e2b15bec0d4f8c1193ac3cfc9d4, type: 3}
+  - {fileID: 12800000, guid: 0a68b564644b66840a492d0b283f1b90, type: 3}
   - {fileID: 12800000, guid: 320b8a54242b72e4a829f28095e71997, type: 3}
+  - {fileID: 12800000, guid: c76ae4ed650b09e448367d65f8bb1d06, type: 3}
+  - {fileID: 12800000, guid: 9d77d8327c5f94743a11770aff92e9b7, type: 3}
   - {fileID: 12800000, guid: 2439bfa342750914bae9ac11426d9fbf, type: 3}
+  - {fileID: 12800000, guid: 9db753bb42ca4c141abce7a34ab08071, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

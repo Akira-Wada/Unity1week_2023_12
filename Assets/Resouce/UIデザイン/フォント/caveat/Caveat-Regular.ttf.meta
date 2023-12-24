@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Caveat
+  - Caveat1
   fallbackFontReferences:
   - {fileID: 12800000, guid: b66939926afed1b4cbbd391c7e69344e, type: 3}
   customCharacters: 

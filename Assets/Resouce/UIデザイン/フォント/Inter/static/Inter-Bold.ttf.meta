@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Inter
+  - Inter9
   fallbackFontReferences:
   - {fileID: 12800000, guid: fa9e405ef150bc8468d12c46f6bf0d8f, type: 3}
   - {fileID: 12800000, guid: cc2a9e55912573f47aafdd1832f810c4, type: 3}
