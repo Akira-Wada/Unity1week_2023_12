@@ -59,7 +59,7 @@ public class RandomChatBox : MonoBehaviour
     [SerializeField,Header("Script")] private PlayerLook playerLook;
 
     //シーン遷移用Index
-    private const int INDEX = 0;
+    private const int INDEX = 4;
     [SerializeField]SceneController sceneController;
 
     private void Start() {
