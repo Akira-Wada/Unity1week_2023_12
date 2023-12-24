@@ -781,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1214584447434814172, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Text
-      value: "\u5438\u3044\u8FBC\u307E\u308C\u308B\u3001\u77B3\u306B\u5199\u308B\u7121\u9650\u306E\u81EA\u5206\u3002"
+      value: "\u4EBA\u9593\u306F\u81EA\u5206\u3057\u304B\u611B\u305B\u306A\u3044\u306E\u306B\u306D\u3002"
       objectReference: {fileID: 0}
     - target: {fileID: 1735648860537957503, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Sprite
