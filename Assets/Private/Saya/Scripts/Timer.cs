@@ -12,9 +12,8 @@ public class Timer : MonoBehaviour
     private float _otherEnd4LookingTimer;
     private float _gameTiemr;
 
-    //追記
-    [SerializeField] private float endSETime;
     [SerializeField] private AudioSource endAudio;
+    public bool isEnd = false;
 
     void Start()
     {
@@ -28,9 +27,9 @@ public class Timer : MonoBehaviour
 
         if(_gameTiemr >= timeLimit)
         {
+            _gameTiemr = 0f;
             endAudio.Play();
-
-            Invoke("EndScene", endSETime);
+            EndScene();
         }
 
         if(_playerLook.GetDirection() == Direction.Up)

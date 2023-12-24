@@ -13,6 +13,8 @@ public class InputReceiver : MonoBehaviour
 {
     [SerializeField]public PlayerLook playerLook;
     [SerializeField]private GameEndScript _gameEndScript;
+    
+    [SerializeField] private GameObject menu;
     private void Awake() 
     {
         //もしセットされていなかった場合は検索してセット
@@ -37,6 +39,7 @@ public class InputReceiver : MonoBehaviour
     public void OnPushRightArrow(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
+        if (menu.activeSelf) return;
         playerLook.ChangeDirection(Direction.Right);
     }
     /// <summary>
@@ -47,6 +50,7 @@ public class InputReceiver : MonoBehaviour
     public void OnPushLeftArrow(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
+        if (menu.activeSelf) return;
         playerLook.ChangeDirection(Direction.Left);
     }
     /// <summary>
@@ -57,6 +61,7 @@ public class InputReceiver : MonoBehaviour
     public void OnPushUpArrow(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
+        if (menu.activeSelf) return;
         playerLook.ChangeDirection(Direction.Up);
     }
     /// <summary>
@@ -67,11 +72,13 @@ public class InputReceiver : MonoBehaviour
     public void OnPushDownArrow(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
+        if (menu.activeSelf) return;
         playerLook.ChangeDirection(Direction.Down);
     }
     public void OnPushSpace(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
+        if (menu.activeSelf) return;
         _gameEndScript.ConfessionEnd();
     }
 }

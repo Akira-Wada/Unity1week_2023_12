@@ -11,7 +11,8 @@ public class SoundVolumeSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        bgmAudioSlider.value = GameSettingDatas.instance.bgmVolume;
+        seAudioSlider.value = GameSettingDatas.instance.seVolume;   
     }
 
     // Update is called once per frame

@@ -1295,11 +1295,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4279328859200802309, guid: b94c54bee6276e44c9194e28d811761b, type: 3}
       propertyPath: seVolume
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4279328859200802309, guid: b94c54bee6276e44c9194e28d811761b, type: 3}
       propertyPath: bgmVolume
-      value: 0.5
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4279328859200802310, guid: b94c54bee6276e44c9194e28d811761b, type: 3}
       propertyPath: m_RootOrder
