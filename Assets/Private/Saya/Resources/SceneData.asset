@@ -43,3 +43,5 @@ MonoBehaviour:
     sceneIndex: 13
   - sceneName: OtherEnd4
     sceneIndex: 14
+  - sceneName: TimeUpEnd
+    sceneIndex: 15
