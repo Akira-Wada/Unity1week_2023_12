@@ -41,5 +41,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GoodEnd6.unity
     guid: bc009ec6778cdd44fbb9a8ec1f50e846
+  - enabled: 1
+    path: Assets/Scenes/OtherEnd1.unity
+    guid: b14099f573fe86c4a85c0381c6c06aaa
+  - enabled: 1
+    path: Assets/Scenes/OtherEnd2.unity
+    guid: 32303bbd2a59b7e4a83655d84f5686d9
+  - enabled: 1
+    path: Assets/Scenes/OtherEnd3.unity
+    guid: eb20777961c11d849a402460d09081f8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4fca2d51e73c92840af2552f74dd95ae, type: 2}

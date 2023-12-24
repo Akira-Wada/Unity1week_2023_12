@@ -39,3 +39,5 @@ MonoBehaviour:
     sceneIndex: 11
   - sceneName: OtherEnd2
     sceneIndex: 12
+  - sceneName: OtherEnd3
+    sceneIndex: 13
