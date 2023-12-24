@@ -781,12 +781,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1214584447434814172, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Text
-      value: "\u611B\u3001\u92ED\u304F\u306A\u3063\u3066\u3002\n\n"
+      value: "\u5915\u66AE\u308C\u3001\u3075\u305F\u308A\u304D\u308A\u306E\u6821\u9577\u5BA4\u3002"
       objectReference: {fileID: 0}
     - target: {fileID: 1735648860537957503, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 64f71432d23dba24b918eee90b8ed438, type: 3}
+      objectReference: {fileID: 21300000, guid: af400091499f0a445bfc6c4b80cf2bbf, type: 3}
     - target: {fileID: 3090851307641067061, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_IsActive
       value: 1
