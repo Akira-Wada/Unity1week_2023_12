@@ -1208,6 +1208,30 @@ PrefabInstance:
       propertyPath: _sceneController
       value: 
       objectReference: {fileID: 3401188298170890216}
+    - target: {fileID: 6462411447147367879, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d9915d3933db49a41a78f1464b44ed94, type: 3}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.7631893
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2971742
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9336387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -410
+      objectReference: {fileID: 0}
     - target: {fileID: 8301408011514570886, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_IsActive
       value: 1
