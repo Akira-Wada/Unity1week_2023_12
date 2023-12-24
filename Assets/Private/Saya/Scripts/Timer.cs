@@ -6,10 +6,10 @@ using BaseDirection;
 public class Timer : MonoBehaviour
 {
     public float timeLimit = 60;
-    [SerializeField]private float _koutyouEndTime = 5;
+    [SerializeField]private float _OtherEnd4Time = 5;
     [SerializeField]private GameEndScript _gameEndScript;
     [SerializeField]private PlayerLook _playerLook;
-    private float _koutyouLookingTimer;
+    private float _otherEnd4LookingTimer;
     private float _gameTiemr;
 
     //追記
@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        _koutyouLookingTimer = 0;
+        _otherEnd4LookingTimer = 0;
         _gameTiemr = 0;
     }
 
@@ -35,11 +35,15 @@ public class Timer : MonoBehaviour
 
         if(_playerLook.GetDirection() == Direction.Up)
         {
-            _koutyouLookingTimer += Time.deltaTime;
-            if(_koutyouLookingTimer >= _koutyouEndTime)
+            _otherEnd4LookingTimer += Time.deltaTime;
+            if(_otherEnd4LookingTimer >= _OtherEnd4Time)
             {
-                _gameEndScript.KoutyouEnd();
+                _gameEndScript.Other4End();
             }
+        }
+        else
+        {
+            _otherEnd4LookingTimer = 0;
         }
     }
     void EndScene()

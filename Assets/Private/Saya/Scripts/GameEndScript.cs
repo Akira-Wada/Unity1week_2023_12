@@ -30,7 +30,7 @@ public class GameEndScript : MonoBehaviour
         }
     }
 
-    public void KoutyouEnd()
+    public void Other4End()
     {
         _sceneController.LoadSelectScene(14);
     }
