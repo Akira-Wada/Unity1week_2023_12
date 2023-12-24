@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
@@ -53,5 +53,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OtherEnd4.unity
     guid: a62842d0bf10458438b825b3abc91301
+  - enabled: 1
+    path: Assets/Scenes/TimeUpEnd.unity
+    guid: c2df056761277e44886775f11e5c3e30
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4fca2d51e73c92840af2552f74dd95ae, type: 2}
