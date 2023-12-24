@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BaseDirection;
+// using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
     public float timeLimit = 60;
     [SerializeField]private float _OtherEnd4Time = 5;
+    [SerializeField]private Image _timeImage;
     [SerializeField]private GameEndScript _gameEndScript;
     [SerializeField]private PlayerLook _playerLook;
     private float _otherEnd4LookingTimer;
@@ -24,6 +27,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         _gameTiemr += Time.deltaTime;
+        _timeImage.fillAmount = _gameTiemr / timeLimit;
 
         if(_gameTiemr >= timeLimit)
         {
