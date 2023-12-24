@@ -12,6 +12,10 @@ public class Timer : MonoBehaviour
     private float _koutyouLookingTimer;
     private float _gameTiemr;
 
+    //追記
+    [SerializeField] private float endSETime;
+    [SerializeField] private AudioSource endAudio;
+
     void Start()
     {
         _koutyouLookingTimer = 0;
@@ -24,7 +28,9 @@ public class Timer : MonoBehaviour
 
         if(_gameTiemr >= timeLimit)
         {
-            _gameEndScript.TimeLimitEnd();
+            endAudio.Play();
+
+            Invoke("EndScene", endSETime);
         }
 
         if(_playerLook.GetDirection() == Direction.Up)
@@ -35,6 +41,10 @@ public class Timer : MonoBehaviour
                 _gameEndScript.KoutyouEnd();
             }
         }
+    }
+    void EndScene()
+    {
+        _gameEndScript.TimeLimitEnd();
     }
 
 }
