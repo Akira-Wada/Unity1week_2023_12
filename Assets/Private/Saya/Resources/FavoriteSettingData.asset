@@ -38,20 +38,20 @@ MonoBehaviour:
     upperScore: 90
     waitTime: 2
     durationTime: 1
-    incline: 7
+    incline: 5
     decline: 15
     favoriteStatus: 5
   - lowerScore: 91
     upperScore: 100
     waitTime: 2
     durationTime: 1
-    incline: 7
+    incline: 2
     decline: 15
     favoriteStatus: 6
   - lowerScore: 101
     upperScore: 999
     waitTime: 2
     durationTime: 1
-    incline: 7
-    decline: 15
+    incline: 2
+    decline: 20
     favoriteStatus: 7
