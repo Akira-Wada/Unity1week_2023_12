@@ -17,41 +17,41 @@ MonoBehaviour:
     upperScore: 20
     waitTime: 2
     durationTime: 1
-    incline: 1
-    decline: 1
+    incline: 5
+    decline: 3
     favoriteStatus: 2
   - lowerScore: 21
     upperScore: 50
-    waitTime: 5
+    waitTime: 2
     durationTime: 1
-    incline: 5
+    incline: 10
     decline: 1
     favoriteStatus: 3
   - lowerScore: 51
     upperScore: 70
-    waitTime: 8
-    durationTime: 2
-    incline: 1
-    decline: 1
+    waitTime: 2
+    durationTime: 1
+    incline: 10
+    decline: 15
     favoriteStatus: 4
   - lowerScore: 71
     upperScore: 90
-    waitTime: 10
-    durationTime: 2
-    incline: 1
-    decline: 1
+    waitTime: 2
+    durationTime: 1
+    incline: 10
+    decline: 15
     favoriteStatus: 5
   - lowerScore: 91
     upperScore: 100
-    waitTime: 20
-    durationTime: 3
-    incline: 1
-    decline: 1
+    waitTime: 2
+    durationTime: 1
+    incline: 10
+    decline: 15
     favoriteStatus: 6
   - lowerScore: 101
     upperScore: 999
-    waitTime: 20
-    durationTime: 3
-    incline: 1
-    decline: 1
+    waitTime: 2
+    durationTime: 1
+    incline: 10
+    decline: 15
     favoriteStatus: 7
