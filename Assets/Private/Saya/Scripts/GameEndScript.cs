@@ -18,19 +18,18 @@ public class GameEndScript : MonoBehaviour
         Direction _nowDirection = _playerLook.GetDirection();
         switch(_nowDirection)
         {
-            case Direction.Up:
+            case Direction.Left:
                 _sceneController.LoadSelectScene(11);
                 break;
             case Direction.Right:
                 _sceneController.LoadSelectScene(12);
                 break;
+            case Direction.Up:
+                _sceneController.LoadSelectScene(13);
+                break;
             case Direction.Down:
                 GoodEnd();
                 break;
-            case Direction.Left:
-                _sceneController.LoadSelectScene(13);
-                break;
-
         }
     }
 
