@@ -975,7 +975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd881ff679b73d4b8e6709fdea8fe11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _favorite: 20
+  _favorite: 51
 --- !u!114 &560506820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1595,6 +1595,10 @@ PrefabInstance:
       propertyPath: changeDownPlayer
       value: 
       objectReference: {fileID: 304949367}
+    - target: {fileID: 1653402393243672446, guid: 0084151b63469444ebd3215818465c85, type: 3}
+      propertyPath: thresholdLookTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0084151b63469444ebd3215818465c85, type: 3}
 --- !u!4 &1088449032 stripped
