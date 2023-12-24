@@ -11,12 +11,9 @@ public class GameEndScript : MonoBehaviour
     [SerializeField] private int _otherThanEndSceneNum = 3;
     
 
-    private PlayerLook _nowDirection;
-
     public void ConfessionEnd()
     {
-        Direction _nowDirection = _playerLook.GetDirection();
-        switch(_nowDirection)
+        switch(_playerLook.GetDirection())
         {
             case Direction.Left:
                 _sceneController.LoadSelectScene(11);
@@ -31,6 +28,16 @@ public class GameEndScript : MonoBehaviour
                 GoodEnd();
                 break;
         }
+    }
+
+    public void KoutyouEnd()
+    {
+        _sceneController.LoadSelectScene(14);
+    }
+
+    public void TimeLimitEnd()
+    {
+        _sceneController.LoadSelectScene(15);
     }
 
     public void GoodEnd()
