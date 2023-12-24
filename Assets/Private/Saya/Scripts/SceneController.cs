@@ -15,7 +15,7 @@ public class SceneController : MonoBehaviour
     [SerializeField, Header("テスト用")]
     private int _Test_selectSceneIndex;
 
-    [SerializeField] private int _otherThanEndSceneNum = 3;
+    [SerializeField] public int _otherThanEndSceneNum = 3;
 
     // [SerializeField]
     private int _startSceneIndex = 0;
