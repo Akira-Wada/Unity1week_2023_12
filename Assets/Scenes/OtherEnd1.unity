@@ -781,7 +781,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1214584447434814172, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Text
-      value: "\u524D\u65B9\u4E0D\u6CE8\u610F\u3001\u604B\u306F\u76F2\u76EE\u3002"
+      value: '
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1735648860537957503, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Sprite
@@ -818,6 +820,30 @@ PrefabInstance:
     - target: {fileID: 6222844510750346424, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Name
       value: DescriptionText
+      objectReference: {fileID: 0}
+    - target: {fileID: 6462411447147367879, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 02df14d8d1c98bc4ca904ac0180d3dcf, type: 3}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.612339
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.371399
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7.371399
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -408
       objectReference: {fileID: 0}
     - target: {fileID: 9167726436800265765, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Pivot.x
