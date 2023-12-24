@@ -1899,7 +1899,7 @@ PrefabInstance:
       objectReference: {fileID: 304949367}
     - target: {fileID: 1653402393243672446, guid: 0084151b63469444ebd3215818465c85, type: 3}
       propertyPath: thresholdLookTime
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0084151b63469444ebd3215818465c85, type: 3}
@@ -2664,9 +2664,17 @@ PrefabInstance:
       value: ChatBoxController
       objectReference: {fileID: 0}
     - target: {fileID: 3621249452211604869, guid: 91ad033825be55a4e8ec123bfbbc9221, type: 3}
+      propertyPath: PopTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621249452211604869, guid: 91ad033825be55a4e8ec123bfbbc9221, type: 3}
       propertyPath: playerLook
       value: 
       objectReference: {fileID: 1216676416}
+    - target: {fileID: 3621249452211604869, guid: 91ad033825be55a4e8ec123bfbbc9221, type: 3}
+      propertyPath: lookingTime
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3621249452211604869, guid: 91ad033825be55a4e8ec123bfbbc9221, type: 3}
       propertyPath: sceneController
       value: 

@@ -15,43 +15,43 @@ MonoBehaviour:
   dataList:
   - lowerScore: 1
     upperScore: 20
-    waitTime: 2
+    waitTime: 2.5
     durationTime: 1
     incline: 5
-    decline: 3
+    decline: 5
     favoriteStatus: 2
   - lowerScore: 21
     upperScore: 50
-    waitTime: 2
+    waitTime: 2.5
     durationTime: 1
     incline: 10
-    decline: 1
+    decline: 8
     favoriteStatus: 3
   - lowerScore: 51
     upperScore: 70
-    waitTime: 2
+    waitTime: 2.5
     durationTime: 1
-    incline: 7
+    incline: 6
     decline: 15
     favoriteStatus: 4
   - lowerScore: 71
     upperScore: 90
-    waitTime: 2
+    waitTime: 2.5
     durationTime: 1
-    incline: 6
-    decline: 15
+    incline: 5
+    decline: 10
     favoriteStatus: 5
   - lowerScore: 91
-    upperScore: 100
-    waitTime: 2
+    upperScore: 110
+    waitTime: 2.5
     durationTime: 1
-    incline: 2
-    decline: 15
+    incline: 3
+    decline: 10
     favoriteStatus: 6
-  - lowerScore: 101
+  - lowerScore: 111
     upperScore: 999
-    waitTime: 2
+    waitTime: 2.5
     durationTime: 1
-    incline: 2
-    decline: 20
+    incline: 4
+    decline: 15
     favoriteStatus: 7
