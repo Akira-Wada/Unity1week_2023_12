@@ -13,4 +13,15 @@ public class MenuKeyboard : MonoBehaviour
         if (menuObject.activeSelf) menuObject.SetActive(false);
         else menuObject.SetActive(true);
     }
+
+    private void Update() {
+        if (menuObject.activeSelf)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
 }
