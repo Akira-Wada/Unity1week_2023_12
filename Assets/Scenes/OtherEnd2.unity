@@ -785,6 +785,10 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 1214584447434814172, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 68
+      objectReference: {fileID: 0}
     - target: {fileID: 1735648860537957503, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -839,11 +843,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -95
+      value: -71
       objectReference: {fileID: 0}
     - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -405
+      value: -412
       objectReference: {fileID: 0}
     - target: {fileID: 9167726436800265765, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Pivot.x

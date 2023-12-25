@@ -1227,26 +1227,26 @@ PrefabInstance:
     - target: {fileID: 6462411447147367879, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ff16ceb2ed6ae98498fb45fe99e0d2ff, type: 3}
+      objectReference: {fileID: 21300000, guid: 02c00fc689659a2419611d849a34a072, type: 3}
     - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.2943864
+      value: 11.260564
       objectReference: {fileID: 0}
     - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2136129
+      value: 11.260564
       objectReference: {fileID: 0}
     - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2136129
+      value: 11.260564
       objectReference: {fileID: 0}
     - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -11
+      value: -46
       objectReference: {fileID: 0}
     - target: {fileID: 6836288178876235802, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -403
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 9167726436800265765, guid: fb6bbf04ec7521d4c93edbba64bb2a48, type: 3}
       propertyPath: m_Pivot.x
